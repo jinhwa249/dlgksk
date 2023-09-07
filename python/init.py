@@ -21,6 +21,8 @@ from sklearn.neighbors import KNeighborsClassifier
 knn = KNeighborsClassifier(n_neighbors=50)
 knn.fit(X_train, y_train)
 
+with open('pytorch/data/knn.picke', 'bw') as f:
+    pickle
 from sklearn.metrics import accuracy_score
 y_pred = knn.predict(X_test)
 print("정확도: {}".format(accuracy_score(y_test, y_pred)))
@@ -49,3 +51,12 @@ while True:
     X_test = s.fit_transform(X_test)
     y_pred = knn.predict(X_test)
     print(X_test)
+
+
+
+
+
+
+
+
+
