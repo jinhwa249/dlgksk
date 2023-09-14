@@ -17,6 +17,7 @@ import os
 from flask_debugtoolbar import DebugToolbarExtension
 from flask_mail import Mail, Message
 
+
 app = Flask(__name__)
 
 # add config key
@@ -109,3 +110,5 @@ def send_email(to, subject, template, **kwargs):
     msg.html = render_template(template + ".html", **kwargs)
     print("sending mail!!!!")
     mail.send(msg)
+
+

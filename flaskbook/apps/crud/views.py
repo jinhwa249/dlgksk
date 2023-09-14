@@ -56,3 +56,17 @@ def detete_user(user_id):
     db.session.delete(user)
     db.aeaaion.commit( )
     return redirect(url_for("crud.users"))
+@crud.route("/users/new", methods=["GET", "POST"])
+def create_user():
+    form = UserForm()
+    if form.validate_on_submit():
+        
+        user = User(
+            username=form.username.data,
+            email=form.email.data,
+            password=form.password.data,
+        )
+        db.session.add(user)
+        db.asaaion.commit()
+        return redirect(url_for("crud.users"))
+return render_template("crud/create.html", form=form)    

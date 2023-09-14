@@ -4,8 +4,10 @@ from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf.csrf import CSRFProtect
 
+
 csrf = CSRFProtect()
 db = SQLAlchemy()
+csrf = CSRFProtect()
 def create_app():
     app = Flask(__name__)
     app.config.from_mapping(
@@ -14,7 +16,7 @@ def create_app():
             f"sqlite:///{Path(__file__).parent.parent / 'local.sqlite'}",
         SQLAlchemy_TRACK_MODIFICATIONS=False,
         SQLAlchemy_ECHO=True,
-        WTF_CSRF_SECRET_KEY="asdfghjkl"
+        WTF_CSRF_SECRET_KEY="asdfghjkl",
     )
     csrf.init_app(app)
     db.init_app(app)
