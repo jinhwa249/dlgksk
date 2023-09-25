@@ -21,7 +21,7 @@ from flask_mail import Mail, Message
 app = Flask(__name__)
 
 # add config key
-app.config["SECRET_KEY"] = "asdfghjkl"
+app.config["SECRET_KEY"] = "9sfno39asf8nk32"
 app.config["DEBUG_TB_INTERCEPT_REDIRECTS"] = False
 # mail config
 app.config["MAIL_SERVER"] = os.environ.get("MAIL_SERVER")
@@ -108,7 +108,4 @@ def send_email(to, subject, template, **kwargs):
     msg = Message(subject, recipients=[to])
     msg.body = render_template(template + ".txt", **kwargs)
     msg.html = render_template(template + ".html", **kwargs)
-    print("sending mail!!!!")
     mail.send(msg)
-
-

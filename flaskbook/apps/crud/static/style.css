@@ -1,12 +1,9 @@
 .crud {
-    font-style: italic;
-}
-table {
-    border-collapse: collapse;
+    font-size: italic;
 }
 
 table,
 th,
-td {border: 1px solid #c0c0c0;
-
+td {
+    border: 1px solid #c0c0c0
 }
