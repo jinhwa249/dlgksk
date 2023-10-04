@@ -37,4 +37,4 @@ for cnt, xx in enumerate(data):
          markerfacecolor='None', markeredgecolor=colors[labels[cnt]],
          markersize=12, markeredgewidth=2)
     
-    show()
+show()
